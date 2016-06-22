@@ -51,7 +51,7 @@ public class SelectManyMenuTester extends SelectTester {
 		// successfully.
 		browser.click(option4Xpath);
 		browser.clickAndWaitForAjaxRerender(submitButton1Xpath);
-		SeleniumAssert.assertElementTextNotVisible(browser, modelValue1Xpath, answer1);
+		SeleniumAssert.assertElementTextInvisible(browser, modelValue1Xpath, answer1);
 
 		String answer4 = "Jul 14, 1789 AD";
 		SeleniumAssert.assertElementTextVisible(browser, modelValue1Xpath, answer4);
@@ -82,7 +82,7 @@ public class SelectManyMenuTester extends SelectTester {
 		// Test that only the fourth value in the menu submits successfully.
 		browser.click(option4Xpath);
 		browser.clickAndWaitForAjaxRerender(submitButton1Xpath);
-		SeleniumAssert.assertElementTextNotVisible(browser, modelValue1Xpath, answer1);
+		SeleniumAssert.assertElementTextInvisible(browser, modelValue1Xpath, answer1);
 
 		String answer4 = "4";
 		SeleniumAssert.assertElementTextVisible(browser, modelValue1Xpath, answer4);
@@ -107,8 +107,8 @@ public class SelectManyMenuTester extends SelectTester {
 		browser.click(option2Xpath);
 		browser.click(option4Xpath);
 		browser.clickAndWaitForAjaxRerender(submitButton1Xpath);
-		SeleniumAssert.assertElementTextNotVisible(browser, modelValue1Xpath, "2");
-		SeleniumAssert.assertElementTextNotVisible(browser, modelValue1Xpath, "4");
+		SeleniumAssert.assertElementTextInvisible(browser, modelValue1Xpath, "2");
+		SeleniumAssert.assertElementTextInvisible(browser, modelValue1Xpath, "4");
 		SeleniumAssert.assertElementTextVisible(browser, modelValue1Xpath, answer1);
 	}
 
@@ -137,7 +137,7 @@ public class SelectManyMenuTester extends SelectTester {
 		browser.click(option3Xpath);
 		browser.centerElementInView(submitButton1Xpath);
 		browser.clickAndWaitForAjaxRerender(submitButton1Xpath);
-		SeleniumAssert.assertElementTextNotVisible(browser, modelValue1Xpath, answer1);
+		SeleniumAssert.assertElementTextInvisible(browser, modelValue1Xpath, answer1);
 
 		String answer3 = "3";
 		SeleniumAssert.assertElementTextVisible(browser, modelValue1Xpath, answer3);
@@ -155,7 +155,7 @@ public class SelectManyMenuTester extends SelectTester {
 		browser.click(option3Xpath2);
 		browser.centerElementInView(submitButton2Xpath);
 		browser.clickAndWaitForAjaxRerender(submitButton2Xpath);
-		SeleniumAssert.assertElementTextNotVisible(browser, modelValue2Xpath, answer1);
+		SeleniumAssert.assertElementTextInvisible(browser, modelValue2Xpath, answer1);
 		SeleniumAssert.assertElementTextVisible(browser, modelValue2Xpath, answer3);
 		SeleniumAssert.assertElementVisible(browser, immediateMessage2Xpath);
 	}
@@ -176,7 +176,7 @@ public class SelectManyMenuTester extends SelectTester {
 
 		// When <select multiple="multiple">, it is necessary to deselect options.
 		deselectByValueAndWaitForAjaxRerender(browser, select1Xpath, answer1);
-		SeleniumAssert.assertElementTextNotVisible(browser, modelValue1Xpath, answer1);
+		SeleniumAssert.assertElementTextInvisible(browser, modelValue1Xpath, answer1);
 
 		// Test that only the third value in the menu submits successfully.
 		String answer3 = "3";
@@ -202,7 +202,7 @@ public class SelectManyMenuTester extends SelectTester {
 		// Test that only the fourth value in the menu submits successfully.
 		browser.click(option4Xpath);
 		browser.clickAndWaitForAjaxRerender(submitButton1Xpath);
-		SeleniumAssert.assertElementTextNotVisible(browser, modelValue1Xpath, answer2);
+		SeleniumAssert.assertElementTextInvisible(browser, modelValue1Xpath, answer2);
 		SeleniumAssert.assertElementTextVisible(browser, modelValue1Xpath, answer4);
 	}
 }

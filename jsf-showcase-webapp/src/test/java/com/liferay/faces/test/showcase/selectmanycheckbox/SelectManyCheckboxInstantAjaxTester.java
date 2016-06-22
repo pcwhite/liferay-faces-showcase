@@ -50,7 +50,7 @@ public class SelectManyCheckboxInstantAjaxTester extends SelectManyCheckboxTeste
 
 		// Test that only the fourth checkbox submits successfully.
 		browser.clickAndWaitForAjaxRerender(manyCheckbox4Xpath);
-		SeleniumAssert.assertElementTextNotVisible(browser, modelValue1Xpath, answer1);
+		SeleniumAssert.assertElementTextInvisible(browser, modelValue1Xpath, answer1);
 
 		String answer4 = "4";
 		SeleniumAssert.assertElementTextVisible(browser, modelValue1Xpath, answer4);

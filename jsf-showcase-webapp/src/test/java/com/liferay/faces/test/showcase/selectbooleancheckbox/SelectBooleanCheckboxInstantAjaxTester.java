@@ -44,7 +44,6 @@ public class SelectBooleanCheckboxInstantAjaxTester extends SelectTester {
 
 		// Test that an unchecked checkbox submits successfully.
 		browser.clickAndWaitForAjaxRerender(checkbox1Xpath);
-		SeleniumAssert.assertCheckboxNotChecked(browser, checkbox1Xpath);
 		text = "false";
 		SeleniumAssert.assertElementTextVisible(browser, modelValue1Xpath, text);
 	}
