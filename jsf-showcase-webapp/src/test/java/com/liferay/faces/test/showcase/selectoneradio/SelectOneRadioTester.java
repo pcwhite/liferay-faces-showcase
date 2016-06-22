@@ -42,7 +42,7 @@ public class SelectOneRadioTester extends SelectTester {
 		// Test that only the fourth value of the radio submits successfully.
 		browser.click(oneRadio4Xpath);
 		browser.clickAndWaitForAjaxRerender(submitButton1Xpath);
-		SeleniumAssert.assertElementTextNotVisible(browser, modelValue1Xpath, answer1);
+		SeleniumAssert.assertElementTextInvisible(browser, modelValue1Xpath, answer1);
 		SeleniumAssert.assertElementTextVisible(browser, modelValue1Xpath, answer4);
 	}
 }

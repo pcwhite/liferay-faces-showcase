@@ -49,7 +49,7 @@ public class SelectOneRadioConversionTester extends SelectOneRadioTester {
 		// Test that the correctly selected radio value submits successfully.
 		browser.click(oneRadio2Xpath);
 		browser.clickAndWaitForAjaxRerender(submitButton1Xpath);
-		SeleniumAssert.assertElementTextNotVisible(browser, modelValue1Xpath, answer1);
+		SeleniumAssert.assertElementTextInvisible(browser, modelValue1Xpath, answer1);
 
 		String answer2 = "Jul 4, 1776 AD";
 		SeleniumAssert.assertElementTextVisible(browser, modelValue1Xpath, answer2);

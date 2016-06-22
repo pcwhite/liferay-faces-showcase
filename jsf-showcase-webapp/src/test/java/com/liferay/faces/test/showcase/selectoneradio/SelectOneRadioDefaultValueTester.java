@@ -43,7 +43,7 @@ public class SelectOneRadioDefaultValueTester extends SelectOneRadioTester {
 		String answer1 = "1";
 		browser.click(oneRadio1Xpath);
 		browser.clickAndWaitForAjaxRerender(submitButton1Xpath);
-		SeleniumAssert.assertElementTextNotVisible(browser, modelValue1Xpath, answer3);
+		SeleniumAssert.assertElementTextInvisible(browser, modelValue1Xpath, answer3);
 		SeleniumAssert.assertElementTextVisible(browser, modelValue1Xpath, answer1);
 	}
 }
