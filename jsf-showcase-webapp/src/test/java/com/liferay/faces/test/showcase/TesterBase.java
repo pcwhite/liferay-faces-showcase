@@ -27,10 +27,14 @@ import com.liferay.faces.test.selenium.assertion.SeleniumAssert;
  */
 public class TesterBase extends IntegrationTesterBase {
 
+	protected static final String modelValue1Xpath = "(//span[contains(@id,':modelValue')])[1]";
+	protected static final String modelValue2Xpath = "(//span[contains(@id,':modelValue')])[2]";
 	protected static final String error1Xpath = "(//div[contains(@class,'field form-group has-error')])[1]";
 	protected static final String requiredCheckboxXpath = "//input[contains(@id,':requiredCheckbox')]";
-	protected static final String submitButton1Xpath = "(//input[@value='Submit'])[1]";
-	protected static final String submitButton2Xpath = "(//input[@value='Submit'])[2]";
+	protected static final String submitButton1Xpath = "(//*[contains(@value,'Submit')])[1]";
+	protected static final String submitButton2Xpath = "(//*[contains(@value,'Submit')])[2]";
+	protected static final String immediateMessage1Xpath = "//li[contains(text(),'APPLY_REQUEST_VALUES')]";
+	protected static final String immediateMessage2Xpath = "//li[contains(text(),'PROCESS_VALIDATIONS')]";
 
 	// Protected Constants
 	protected static final String TEST_CONTEXT_URL;

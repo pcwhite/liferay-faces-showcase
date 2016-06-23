@@ -54,7 +54,7 @@ public class SelectOneRadioImmediateTester extends SelectOneRadioTester {
 		String oneRadio4Xpath2 = "(//input[contains(@id,':selectOneRadio')])[9]";
 		browser.click(oneRadio4Xpath2);
 		browser.clickAndWaitForAjaxRerender(submitButton2Xpath);
-		SeleniumAssert.assertElementTextNotVisible(browser, modelValue2Xpath, answer1);
+		SeleniumAssert.assertElementTextInvisible(browser, modelValue2Xpath, answer1);
 		SeleniumAssert.assertElementTextVisible(browser, modelValue2Xpath, answer4);
 		SeleniumAssert.assertElementVisible(browser, immediateMessage2Xpath);
 	}

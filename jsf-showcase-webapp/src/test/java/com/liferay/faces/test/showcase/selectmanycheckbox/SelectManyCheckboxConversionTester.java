@@ -48,7 +48,7 @@ public class SelectManyCheckboxConversionTester extends SelectManyCheckboxTester
 		SeleniumAssert.assertElementVisible(browser, conversionIncorrectMessage1Xpath);
 		browser.click(manyCheckbox1Xpath);
 		browser.clickAndWaitForAjaxRerender(submitButton1Xpath);
-		SeleniumAssert.assertElementVisible(browser, conversionCorrectMessage2Xpath);
+		SeleniumAssert.assertElementVisible(browser, conversionCorrectMessage1Xpath);
 
 	}
 }

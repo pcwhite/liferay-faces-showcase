@@ -49,11 +49,11 @@ public class SelectOneMenuTester extends SelectTester {
 		browser.click(option2Xpath);
 		browser.centerElementInView(submitButton1Xpath);
 		browser.clickAndWaitForAjaxRerender(submitButton1Xpath);
-		SeleniumAssert.assertElementTextNotVisible(browser, modelValue1Xpath, answer1);
+		SeleniumAssert.assertElementTextInvisible(browser, modelValue1Xpath, answer1);
 
 		String answer2 = "Jul 4, 1776 AD";
 		SeleniumAssert.assertElementTextVisible(browser, modelValue1Xpath, answer2);
-		SeleniumAssert.assertElementVisible(browser, conversionCorrectMessage2Xpath);
+		SeleniumAssert.assertElementVisible(browser, conversionCorrectMessage1Xpath);
 	}
 
 	protected void runSelectOneMenuDataModelTest1(Browser browser, String answer1) {
@@ -77,7 +77,7 @@ public class SelectOneMenuTester extends SelectTester {
 		browser.click(option4Xpath);
 		browser.centerElementInView(submitButton1Xpath);
 		browser.clickAndWaitForAjaxRerender(submitButton1Xpath);
-		SeleniumAssert.assertElementTextNotVisible(browser, modelValue1Xpath, answer1);
+		SeleniumAssert.assertElementTextInvisible(browser, modelValue1Xpath, answer1);
 		SeleniumAssert.assertElementTextVisible(browser, modelValue1Xpath, answer4);
 	}
 
@@ -97,7 +97,7 @@ public class SelectOneMenuTester extends SelectTester {
 		browser.click(option1Xpath);
 		browser.centerElementInView(submitButton1Xpath);
 		browser.clickAndWaitForAjaxRerender(submitButton1Xpath);
-		SeleniumAssert.assertElementTextNotVisible(browser, modelValue1Xpath, answer3);
+		SeleniumAssert.assertElementTextInvisible(browser, modelValue1Xpath, answer3);
 		SeleniumAssert.assertElementTextVisible(browser, modelValue1Xpath, answer1);
 	}
 
@@ -122,7 +122,7 @@ public class SelectOneMenuTester extends SelectTester {
 		browser.click(option4Xpath);
 		browser.centerElementInView(submitButton1Xpath);
 		browser.clickAndWaitForAjaxRerender(submitButton1Xpath);
-		SeleniumAssert.assertElementTextNotVisible(browser, modelValue1Xpath, answer1);
+		SeleniumAssert.assertElementTextInvisible(browser, modelValue1Xpath, answer1);
 		SeleniumAssert.assertElementTextVisible(browser, modelValue1Xpath, answer3);
 	}
 
@@ -148,7 +148,7 @@ public class SelectOneMenuTester extends SelectTester {
 		browser.click(option3Xpath);
 		browser.centerElementInView(submitButton1Xpath);
 		browser.clickAndWaitForAjaxRerender(submitButton1Xpath);
-		SeleniumAssert.assertElementTextNotVisible(browser, modelValue1Xpath, answer1);
+		SeleniumAssert.assertElementTextInvisible(browser, modelValue1Xpath, answer1);
 
 		String answer3 = "3";
 		SeleniumAssert.assertElementTextVisible(browser, modelValue1Xpath, answer3);
@@ -163,7 +163,7 @@ public class SelectOneMenuTester extends SelectTester {
 		browser.click(option3Xpath2);
 		browser.centerElementInView(submitButton2Xpath);
 		browser.clickAndWaitForAjaxRerender(submitButton2Xpath);
-		SeleniumAssert.assertElementTextNotVisible(browser, modelValue2Xpath, answer1);
+		SeleniumAssert.assertElementTextInvisible(browser, modelValue2Xpath, answer1);
 		SeleniumAssert.assertElementTextVisible(browser, modelValue2Xpath, answer3);
 		SeleniumAssert.assertElementVisible(browser, immediateMessage2Xpath);
 	}
@@ -185,7 +185,7 @@ public class SelectOneMenuTester extends SelectTester {
 		// Test that only the first value in the menu submits successfully.
 		String answer1 = "1";
 		selectByValueAndWaitForAjaxRerender(browser, select1Xpath, answer1);
-		SeleniumAssert.assertElementTextNotVisible(browser, modelValue1Xpath, answer3);
+		SeleniumAssert.assertElementTextInvisible(browser, modelValue1Xpath, answer3);
 		SeleniumAssert.assertElementTextVisible(browser, modelValue1Xpath, answer1);
 	}
 }

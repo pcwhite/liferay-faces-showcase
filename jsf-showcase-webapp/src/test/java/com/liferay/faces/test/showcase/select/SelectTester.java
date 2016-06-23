@@ -29,27 +29,17 @@ import com.liferay.faces.test.showcase.TesterBase;
  */
 public class SelectTester extends TesterBase {
 
-	protected static final String modelValue1Xpath = "(//span[contains(@id,':modelValue')])[1]";
-	protected static final String modelValue2Xpath = "(//span[contains(@id,':modelValue')])[2]";
 	protected static final String modelValueElement1Xpath = "(//div[@class='results-content'])[1]/pre/text()";
-	protected static final String renderedCheckboxXpath = "//input[contains(@id,':renderedCheckbox')]";
 	protected static final String checkbox1Xpath = "//input[contains(@id,':checkbox')]";
 	protected static final String checkbox2Xpath = "(//input[contains(@id,':checkbox')])[2]";
-	protected static final String success1Xpath = "(//div[contains(@class,'field form-group has-success')])[1]";
 	protected static final String option1Xpath = "(//select[contains(@id, 'select')]/option)[1]";
 	protected static final String option2Xpath = "(//select[contains(@id, 'select')]/option)[2]";
 	protected static final String option3Xpath = "(//select[contains(@id, 'select')]/option)[3]";
 	protected static final String option4Xpath = "(//select[contains(@id, 'select')]/option)[4]";
 	protected static final String option1Xpath2 = "(//select[contains(@id, 'select')]/option)[6]";
 	protected static final String option3Xpath2 = "(//select[contains(@id, 'select')]/option)[8]";
-	protected static final String immediateMessage1Xpath =
-		"//ul[@class='feedback']/li[contains(text(),'APPLY_REQUEST_VALUES')]";
-	protected static final String immediateMessage2Xpath =
-		"//ul[@class='feedback']/li[contains(text(),'PROCESS_VALIDATIONS')]";
-	protected static final String conversionIncorrectMessage1Xpath =
-		"//ul[@class='feedback']/li[contains(text(),'Incorrect!')]";
-	protected static final String conversionCorrectMessage2Xpath =
-		"//ul[@class='feedback']/li[contains(text(),'Correct!')]";
+	protected static final String conversionIncorrectMessage1Xpath = "//li[contains(text(),'Incorrect!')]";
+	protected static final String conversionCorrectMessage1Xpath = "//li[contains(text(),'Correct!')]";
 
 	// When <select multiple="multiple">, it is necessary to deselect options.
 	protected void deselectByValueAndWaitForAjaxRerender(Browser browser, String selectXpath, String value) {
